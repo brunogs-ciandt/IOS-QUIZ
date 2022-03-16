@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Quiz View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="QuizViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,7 +37,7 @@
                                 <rect key="frame" x="0.0" y="591" width="414" height="181"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehh-oj-GBF">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Ehh-oj-GBF">
                                         <rect key="frame" x="0.0" y="1" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -47,8 +47,11 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                             <color key="baseForegroundColor" red="0.85238564009999995" green="0.1195159182" blue="0.010770076890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="selectoption:" destination="BYZ-38-t0r" eventType="touchUpInside" id="drq-ZE-RAW"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WuT-eF-RE5">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="WuT-eF-RE5">
                                         <rect key="frame" x="0.0" y="46" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -58,8 +61,11 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                             <color key="baseForegroundColor" red="0.85238564009999995" green="0.1195159182" blue="0.010770076890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="selectoption:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eut-c4-S8t"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1N-Uy-EU8">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="g1N-Uy-EU8">
                                         <rect key="frame" x="0.0" y="92" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -69,8 +75,11 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                             <color key="baseForegroundColor" red="0.85238564009999995" green="0.1195159182" blue="0.010770076890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="selectoption:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NBG-kU-LdR"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYU-z4-wMh">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="mYU-z4-wMh">
                                         <rect key="frame" x="0.0" y="136" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -80,6 +89,9 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                             <color key="baseForegroundColor" red="0.85238564009999995" green="0.1195159182" blue="0.010770076890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="selectoption:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pWt-NW-cX1"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -97,17 +109,23 @@
                     </view>
                     <navigationItem key="navigationItem" id="OFZ-8R-gMw"/>
                     <connections>
-                        <segue destination="8Jx-rG-BWn" kind="show" id="uJ5-uq-1sp"/>
+                        <outlet property="lblquestion" destination="xdy-Fe-0xl" id="wJl-b3-8gK"/>
+                        <outlet property="viewtimer" destination="1nH-Hv-9WA" id="JnU-0b-iWT"/>
+                        <outletCollection property="btnoptions" destination="Ehh-oj-GBF" collectionClass="NSMutableArray" id="Hp2-Th-lQm"/>
+                        <outletCollection property="btnoptions" destination="WuT-eF-RE5" collectionClass="NSMutableArray" id="Gia-XZ-vwj"/>
+                        <outletCollection property="btnoptions" destination="g1N-Uy-EU8" collectionClass="NSMutableArray" id="tbR-Nj-H7L"/>
+                        <outletCollection property="btnoptions" destination="mYU-z4-wMh" collectionClass="NSMutableArray" id="sR3-yo-bnY"/>
+                        <segue destination="8Jx-rG-BWn" kind="show" identifier="resultSegue" id="uJ5-uq-1sp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1192.753623188406" y="-117.1875"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="cQH-KT-46u">
             <objects>
-                <viewController id="8Jx-rG-BWn" sceneMemberID="viewController">
+                <viewController id="8Jx-rG-BWn" customClass="ResultViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BMo-3A-C8Z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -148,21 +166,30 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSc-vW-nwo">
-                                <rect key="frame" x="174" y="732" width="67" height="31"/>
+                                <rect key="frame" x="20" y="732" width="374" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                <buttonConfiguration key="configuration" style="plain" title="Reiniciar">
                                     <backgroundConfiguration key="background">
                                         <color key="backgroundColor" red="0.85238564009999995" green="0.1195159182" blue="0.010770076890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="reiniciar:" destination="8Jx-rG-BWn" eventType="touchUpInside" id="4yI-Vr-0p0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PtK-u6-YSk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Wcy-jz-vyZ"/>
+                    <connections>
+                        <outlet property="lblscore" destination="k0I-Q2-FiZ" id="Kfv-4A-vwH"/>
+                        <outlet property="lbltotalacertos" destination="1bQ-5Z-74W" id="F7i-EW-QMu"/>
+                        <outlet property="lbltotalerros" destination="BE7-aX-ctW" id="7tS-Qq-dLV"/>
+                        <outlet property="lbltotalquestions" destination="rKh-Pq-Emd" id="wBp-sN-xK4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T7v-4k-Snl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
