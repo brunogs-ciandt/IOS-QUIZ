@@ -25,7 +25,7 @@ class QuizViewController: UIViewController {
     
 
     @IBAction func selectoption(_ sender: UIButton) {
-        let btnindex = btnoptions.firstIndex(of: <#T##UIButton#>)(of: sender)!
+        let btnindex = btnoptions.firstIndex(of: sender)!
         quizmanager.validateanswer(btnindex)
         getnewquiz()
     }
@@ -41,12 +41,25 @@ class QuizViewController: UIViewController {
         }
         
         getnewquiz()
+        print("Tela 1 - ira aparecer")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("Tela 1 - apareceu")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("Tela 1 - vai sumir")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("Tela 1 - sumiu")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let resultsegue = (segue.destination as! ResultViewController)
-        resultsegue.totalcorrectanswers = quizmanager.totalCorrectAnswer
-        resultsegue.totalanswer = quizmanager.totalAnswers
+        resultsegue.totalCorrectAnswers = quizmanager.totalCorrectAnswer
+        resultsegue.totalAnswer = quizmanager.totalAnswers
     }
     
     func getnewquiz() {

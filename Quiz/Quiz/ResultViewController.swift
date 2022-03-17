@@ -9,8 +9,8 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
-    var totalcorrectanswers : Int = 0
-    var totalanswer : Int = 0
+    var totalCorrectAnswers : Int = 0
+    var totalAnswer : Int = 0
     
     
     @IBOutlet weak var lbltotalerros: UILabel!
@@ -24,11 +24,33 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        lbltotalacertos.text = "Perguntas corretas: \(totalcorrectanswers)"
-        lbltotalquestions.text = "Perguntas respondidas: \(totalanswer)"
+        lbltotalacertos.text = "Perguntas corretas: \(totalCorrectAnswers)"
+        lbltotalquestions.text = "Perguntas respondidas: \(totalAnswer)"
         
-        lbltotalerros.text = "Perguntas erradas: \(totalanswer - totalcorrectanswers)"
-        lblscore.text = "\(totalcorrectanswers*100/totalanswer)"
+        lbltotalerros.text = "Perguntas erradas: \(totalAnswer - totalCorrectAnswers)"
+        
+        if totalCorrectAnswers > 0 {
+            lblscore.text = "\(totalCorrectAnswers*100/totalAnswer)%"
+        } else {
+            lblscore.text = "0%"
+        }
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("Tela 2 - ira aparecer")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("Tela 2 - apareceu")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("Tela 2 - vai sumir")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("Tela 2 - sumiu")
     }
     
 
